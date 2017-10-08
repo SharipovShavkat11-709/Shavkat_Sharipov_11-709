@@ -7,24 +7,23 @@ namespace _6 /*Считывая числа пока не встретится 0,
         static void Main(string[] args)
         {
             Console.WriteLine("Введите числа:");
-            int Max = Convert.ToInt32(Console.ReadLine()), numberOfMax = 1;
+            int max = Convert.ToInt32(Console.ReadLine()), numberOfMax = 1;
             while (true)
             {
                 int number = Convert.ToInt32(Console.ReadLine());
                 if (number == 0)
                     break;
-                if (number > Max)
+                if (number > max)
                 {
-                    Max = number;
+                    max = number;
                     numberOfMax = 1;
                 }
-                else if (number == Max)
+                else if (number == max)
                 {
                     numberOfMax++;
                 }
             }
-            Console.WriteLine("Максимальное число " + Max + " встречается " + numberOfMax + " раз ");
-            Console.ReadKey();
+            Console.WriteLine("Максимальное число " + max + " встречается " + numberOfMax + " раз ");
         }
     }
 }
