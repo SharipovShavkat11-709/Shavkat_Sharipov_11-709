@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace _1
+namespace _1 /*Проверить, является ли билет счастливым по-питерски(abcdef=>a+c+e= b + d + f)*/
 {
     class Program
     {

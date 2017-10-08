@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace _2
+namespace _2 /*Возвести вещественное число n в целую степень k(используя алгоритм быстрого возведения в степень – бинарный/справа налево)*/
 {
     class Program
     {
@@ -12,12 +8,21 @@ namespace _2
         {
             Console.Write("Введите вещественное число:");
             double n = Convert.ToDouble(Console.ReadLine());
-
-            Console.Write("Введите степень, в которую хотите возвести число:");
+            Console.Write("Введите степень:");
             int k = Convert.ToInt32(Console.ReadLine());
-
-            double b = Math.Pow(n, k);
-            Console.WriteLine("Ответ:"+ b);
+            double result = 1;
+            while (k != 0)
+                if (k % 2 == 1)
+                {
+                    result *= n;
+                    --k;
+                }
+                else
+                {
+                    n *= n;
+                    k = k / 2;
+                }
+            Console.WriteLine(result);
             Console.ReadKey();
         }
     }
